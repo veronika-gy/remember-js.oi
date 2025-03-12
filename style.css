@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: #3B2F2A;
+    line-height: 1.6;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #e1e43c;
+    color: rgb(0, 0, 0);
+  }
+
+  header .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  header nav a {
+    margin-left: 20px;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+
+  header nav a:hover {
+    color: #dcba32;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 40px;
+    background-color: rgb(0, 0, 0);
+  }
+
+  .why-js {
+    max-width: 50%;
+  }
+
+  .why-js h1 {
+    font-size: 48px;
+    color: #fff238;
+    margin-bottom: 20px;
+  }
+
+  .why-js p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    color: #ebeb46;
+  }
+
+  .info-image img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 40px;
+    background-color: #e1e43c;
+    gap: 80px;
+  }
+
+  .feature {
+    text-align: left;
+    max-width: 680px;
+  }
+  .feature h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .feature p {
+    font-size: 23px;
+    color: #000000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .reviews {
+    background-color: #2d2d2d;
+    padding: 50px 40px;
+    text-align: center;
+}
+
+.reviews h1 {
+    font-size: 36px;
+    color: #fff238;
+    margin-bottom: 30px;
+}
+
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px; 
+}
+
+.review {
+    background-color: #333333;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    flex: 1;
+    min-width: 280px; 
+    text-align: left;
+    gap: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.review-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-content {
+    flex: 1;
+}
+
+.review-text {
+    font-size: 18px;
+    color: #ebeb46;
+    margin-bottom: 8px;
+}
+
+.review-author {
+    font-size: 16px;
+    color: #fff238;
+    font-style: italic;
+}
+
+.review:hover {
+    background-color: #444444;
+}
+
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: #fff238;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+
+@media (max-width: 1024px) {
+  header {
+    padding: 15px 30px;
+  }
+
+  .info {
+    padding: 40px 30px;
+  }
+
+  .why-js h1 {
+    font-size: 40px;
+  }
+
+  .why-js p {
+    font-size: 18px;
+  }
+
+  .info-image img {
+    max-width: 80%;
+  }
+
+  .features {
+    padding: 40px 30px;
+    gap: 60px;
+  }
+
+  .feature h1 {
+    font-size: 30px;
+  }
+
+  .feature p {
+    font-size: 20px;
+  }
+
+  .reviews {
+    padding: 40px 30px;
+  }
+
+  .review {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  header nav {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  header nav a {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+
+  .info {
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .why-js {
+    max-width: 100%;
+  }
+
+  .why-js h1 {
+    font-size: 32px;
+  }
+
+  .why-js p {
+    font-size: 18px;
+  }
+
+  .info-image img {
+    max-width: 90%;
+    margin-top: 20px;
+  }
+
+  .features {
+    padding: 30px 20px;
+    gap: 40px;
+  }
+
+  .feature {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .feature h1 {
+    font-size: 28px;
+  }
+
+  .feature p {
+    font-size: 18px;
+  }
+
+  .reviews {
+    padding: 30px 20px;
+  }
+
+  .reviews-container {
+    flex-direction: column;
+  }
+
+  .review {
+    width: 100%;
+    min-width: unset;
+  }
+
+  footer {
+    padding: 15px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Learning Website</title>
+  <link rel="stylesheet" href="data_types.css">
+
+</head>
+<body>
+  <header>
+    <div class="logo">Remember JavaScript</div>
+    <nav>
+      <a href="in.html">Home</a>
+      <a href="learn.html">Learn page</a>
+      <a href="recommendations.html">Recommendation</a>
+    </nav>
+  </header>
+  <div class="content">
+    <h1>Переменные и типы данных</h1>
+    <p>Переменные используются для хранения данных. В JavaScript есть три способа объявления переменных:</p>
+    
+    <div class="code-block">
+        <pre><code>// Объявление переменных
+var oldWay = "Я устарел"; // Устаревший способ
+let modern = "Я современный"; // Рекомендуется
+const constant = "Я не изменяюсь"; // Константа</code></pre>
+    </div>
+
+    <h2>Типы данных</h2>
+    <p>В JavaScript есть несколько типов данных:</p>
+
+    <ul>
+        <li><b>Number</b> — числовые значения</li>
+        <li><b>String</b> — строки (текст)</li>
+        <li><b>Boolean</b> — логические значения (true / false)</li>
+        <li><b>Object</b> — сложные структуры данных</li>
+        <li><b>Array</b> — массивы (списки значений)</li>
+        <li><b>Null</b> и <b>Undefined</b> — отсутствие значения</li>
+    </ul>
+
+    <div class="code-block">
+        <pre><code>// Примеры типов данных
+let number = 42;        // Число
+let text = "Привет";    // Строка
+let isTrue = true;      // Логическое значение
+let user = { name: "Иван", age: 30 }; // Объект
+let numbers = [1, 2, 3]; // Массив</code></pre>
+</div>
+<div class="number-type">
+    <h1>Числовой тип данных</h1>
+    <div class="code-block">
+        <code><pre>//Пример
+let num = 16;
+num = 19.345;</pre></code>
+    </div>
+    <p>Числовой тип данных(number) представляет как целочисленные значения, так и числа с плавающей точкой.</p>
+    <p>Существует множество операций для чисел, например, умножение *, деление /, сложение +, вычитание - и так далее.</p>
+    <p>Кроме обычных чисел, существуют так называемые «специальные числовые значения», которые относятся к этому типу данных: Infinity, -Infinity и NaN.</p>
+    <p>Infinity представляет собой математическую бесконечность ∞. Это особое значение, которое больше любого числа.</p>
+</div>
+<div class="code-block">
+    <code><pre>//Его можно получить с помощью деления:
+alert( 1 / 0 ); // Infinity
+
+//Или задать его явно:
+alert( Infinity ); // Infinity</pre></code>
+</div>
+<div class="number-type">
+    <p>Значение NaN «прилипчиво». Любая математическая операция с NaN возвращает NaN:</p>
+</div>
+<div class="code-block">
+    <code><pre>//Примеры
+alert( NaN + 1 ); // NaN
+alert( 3 * NaN ); // NaN
+alert( "не число" / 2 - 1 ); // NaN
+</pre></code></div>
+<div class="string-type">
+    <h1>Строковый тип данных</h1>
+    <div class="code-block">
+        <code><pre>//Пример
+let str1 = "Привет";
+let str2 = 'Мир';
+let str3 = `JavaScript`;</pre></code>
+    </div>
+    <p>Строковый тип данных (string) используется для представления текстовой информации. Строки можно заключать в двойные кавычки " ", одинарные кавычки ' ', а также использовать обратные кавычки ` ` для шаблонных строк.</p>
+    <p>Строки поддерживают множество операций, таких как объединение с помощью +, получение длины через <code>length</code>, доступ к символам через индексы и встроенные методы.</p>
+</div>
+
+<div class="code-block">
+    <code><pre>//Конкатенация строк:
+let greeting = "Привет, " + "мир!";
+alert(greeting); // "Привет, мир!"
+
+//Шаблонные строки:
+let name = "Алекс";
+alert(`Привет, ${name}!`); // "Привет, Алекс!"</pre></code>
+</div>
+
+<div class="string-type">
+    <p>Строки неизменяемы, что означает, что нельзя изменить символ в строке, но можно создать новую строку.</p>
+</div>
+
+<div class="code-block">
+    <code><pre>//Попытка изменить строку:
+let text = "JavaScript";
+text[0] = "j"; // Ошибка: строки неизменяемы
+
+//Однако можно создать новую строку:
+text = "javascript";</pre></code>
+</div>
+<div class="boolean-type">
+    <h1>Логический тип данных</h1>
+    <div class="code-block">
+        <code><pre>//Пример
+let isTrue = true;
+let isFalse = false;</pre></code>
+    </div>
+    <p>Логический тип данных (boolean) имеет всего два значения: <code>true</code> (истина) и <code>false</code> (ложь). Чаще всего используется для условий и проверок.</p>
+</div>
+
+<div class="code-block">
+    <code><pre>//Пример использования в условии:
+let isAdult = true;
+if (isAdult) {
+    alert("Доступ разрешён");
+} else {
+    alert("Доступ запрещён");
+}</pre></code>
+</div>
+
+<div class="boolean-type">
+    <p>Булевы значения часто получаются в результате логических операций, таких как сравнение:</p>
+</div>
+
+<div class="code-block">
+    <code><pre>//Примеры сравнения:
+alert( 10 > 5 );  // true
+alert( 3 == 5 );  // false
+alert( "яблоко" != "груша" ); // true</pre></code>
+</div>
+
+<div class="boolean-type">
+    <p>Также любое значение в JavaScript может быть приведено к логическому. Например:</p>
+</div>
+
+<div class="code-block">
+    <code><pre>//Приведение к логическому значению:
+alert( Boolean(1) );    // true
+alert( Boolean(0) );    // false
+alert( Boolean("Привет") ); // true
+alert( Boolean("") );   // false</pre></code>
+</div>
+<div class="object-type">
+    <h1>Объектный тип данных</h1>
+    <div class="code-block">
+        <code><pre>//Пример создания объекта
+let user = {
+    name: "Алекс",
+    age: 25,
+    isAdmin: true
+};</pre></code>
+    </div>
+    <p>Объект (object) — это коллекция свойств, где каждое свойство имеет ключ (имя) и значение. Объекты позволяют хранить структурированные данные.</p>
+</div>
+
+<div class="code-block">
+    <code><pre>//Доступ к свойствам объекта:
+alert( user.name );  // "Алекс"
+alert( user.age );   // 25
+
+//Добавление нового свойства:
+user.city = "Москва";
+alert( user.city ); // "Москва"</pre></code>
+</div>
+
+<div class="object-type">
+    <p>В объекте могут храниться не только данные, но и функции (методы):</p>
+</div>
+
+<div class="code-block">
+    <code><pre>//Добавление метода в объект
+user.sayHi = function() {
+    alert("Привет!");
+};
+user.sayHi(); // "Привет!"</pre></code>
+</div>
+
+<div class="object-type">
+    <p>Для создания множества объектов можно использовать конструкторы или классы.</p>
+</div>
+
+<div class="code-block">
+    <code><pre>//Функция-конструктор
+function User(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+let user1 = new User("Иван", 30);
+let user2 = new User("Ольга", 28);
+
+alert(user1.name); // "Иван"
+alert(user2.age);  // 28</pre></code>
+</div>
+<div class="array-type">
+    <h1>Массивы в JavaScript</h1>
+    <div class="code-block">
+        <code><pre>//Пример создания массива
+let fruits = ["Яблоко", "Банан", "Апельсин"];</pre></code>
+    </div>
+    <p>Массив (array) — это упорядоченная коллекция элементов, к которым можно обращаться по индексу.</p>
+</div>
+
+<div class="code-block">
+    <code><pre>//Доступ к элементам массива
+alert(fruits[0]); // "Яблоко"
+alert(fruits[1]); // "Банан"
+
+//Изменение элемента
+fruits[2] = "Груша";
+alert(fruits); // ["Яблоко", "Банан", "Груша"]</pre></code>
+</div>
+
+<div class="array-type">
+    <p>Массивы поддерживают множество методов, позволяющих добавлять, удалять и изменять элементы.</p>
+</div>
+
+<div class="code-block">
+    <code><pre>//Добавление и удаление элементов
+fruits.push("Киви"); // Добавляет в конец
+fruits.pop();        // Удаляет последний элемент
+
+fruits.unshift("Ананас"); // Добавляет в начало
+fruits.shift();           // Удаляет первый элемент</pre></code>
+</div>
+
+<div class="array-type">
+    <p>Перебор массива можно выполнить разными способами.</p>
+</div>
+
+<div class="code-block">
+    <code><pre>//Перебор с помощью for
+for (let i = 0; i < fruits.length; i++) {
+    alert(fruits[i]);
+}
+
+//Перебор с помощью for...of
+for (let fruit of fruits) {
+    alert(fruit);
+}
+
+//Метод forEach
+fruits.forEach((item, index) => {
+    alert(${index}: ${item});
+});</pre></code>
+</div>
+
+<div class="array-type">
+    <p>Массивы также имеют полезные методы для работы с данными.</p>
+</div>
+
+<div class="code-block">
+    <code><pre>//Методы массивов
+let numbers = [1, 2, 3, 4, 5];
+
+//Создание нового массива с изменёнными элементами
+let squared = numbers.map(num => num ** 2);
+alert(squared); // [1, 4, 9, 16, 25]
+
+//Фильтрация массива
+let evenNumbers = numbers.filter(num => num % 2 === 0);
+alert(evenNumbers); // [2, 4]
+
+//Поиск элемента
+let found = numbers.find(num => num > 3);
+alert(found); // 4</pre></code>
+</div>
+<div class="null-undefined-type">
+    <h1>Отсутствие значений: null и undefined</h1>
+    <div class="code-block">
+        <code><pre>//Примеры
+let emptyValue = null;
+let notAssigned;</pre></code>
+    </div>
+    <p><code>null</code> и <code>undefined</code> представляют собой отсутствие значения, но имеют разные применения.</p>
+</div>
+
+<div class="null-undefined-type">
+    <h2>Null</h2>
+    <p><code>null</code> — это «ничего», «пусто» или «значение неизвестно». Обычно его присваивают явно.</p>
+</div>
+
+<div class="code-block">
+    <code><pre>//Пример использования null
+let user = null;
+alert(user); // null</pre></code>
+</div>
+
+<div class="null-undefined-type">
+    <h2>Undefined</h2>
+    <p><code>undefined</code> означает, что значение не было присвоено.</p>
+</div>
+
+<div class="code-block">
+    <code><pre>//Пример использования undefined
+let age;
+alert(age); // undefined</pre></code>
+</div>
+
+<div class="null-undefined-type">
+    <p>Различия между <code>null</code> и <code>undefined</code> можно увидеть в операциях.</p>
+</div>
+
+<div class="code-block">
+    <code><pre>//Сравнение null и undefined
+alert(null == undefined);  // true (нестрогое равенство)
+alert(null === undefined); // false (строгое равенство)
+
+//Арифметические операции
+alert(null + 1); // 1 (null преобразуется в 0)
+alert(undefined + 1); // NaN (undefined не может быть числом)</pre></code>
+</div>
+
+<div class="null-undefined-type">
+    <p>Использование <code>??</code> (оператор нулевого слияния) помогает работать с отсутствующими значениями.</p>
+</div>
+
+<div class="code-block">
+    <code><pre>//Оператор нулевого слияния ??
+let value = null ?? "Значение по умолчанию";
+alert(value); // "Значение по умолчанию"
+
+let definedValue = 0 ?? "Значение по умолчанию";
+alert(definedValue); // 0 (не null или undefined, поэтому не заменяется)</pre></code>
+</div>
+
+
+</div>
+<a href="learn.html" class="back-button">Назад</a>
+<a href="functions.html" class="next-button">Дальше</a>
+</div>
+
+
+  <script src="/app.js"></script>
+</body>
+</html>
